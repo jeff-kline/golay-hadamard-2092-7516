@@ -13,7 +13,7 @@ From the repository root run `make verify` and `make paper`. The first command g
 | 4204 | 8,834,706 | 2102 |
 | 7516 | 28,241,370 | 3758 |
 
-All 42,569,568 row pairs passed. The three-page paper was built with pdfTeX 1.40.22 (TeX Live 2021), using the fixed epoch in the Makefile. The PDF of the revised manuscript has SHA-256 `41b812dfb3a73e1a0b36639882058b87a6d59ede8d427f2937cebc2973145ec3`. The release check used Node.js 24.22.3 and Apple clang 21.0.0.
+All 42,569,568 row pairs passed. The three-page paper was built with pdfTeX 1.40.22 (TeX Live 2021), using the fixed epoch in the Makefile. The PDF of the revised manuscript has SHA-256 `456d6c48bcfe741cf4480081b22c85acaac090050f3beac8ea68e63e4e94da9e`. The release check used Node.js 24.22.3 and Apple clang 21.0.0.
 
 ## Review and attribution
 
