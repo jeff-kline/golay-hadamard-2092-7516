@@ -2,6 +2,12 @@ cff-version: 1.2.0
 message: "Please cite the paper and identify the version used."
 title: "Golay constructions of Hadamard matrices of orders 2092 and 7516"
 version: "0.1.0"
+date-released: 2026-11-26
+doi: "10.5281/zenodo.24569526"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24569525"
+    description: "All versions of this work"
 type: software
 authors:
   - family-names: Kline

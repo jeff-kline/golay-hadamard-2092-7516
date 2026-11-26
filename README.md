@@ -2,7 +2,9 @@
 
 Jeffery Kline
 
-**Release candidate v0.1.0.** [Admission record](ADMISSION.md)
+**Status: version 0.1.0 admitted November 26, 2026.** [Tag v0.1.0](https://github.com/jeff-kline/golay-hadamard-2092-7516/tree/v0.1.0) · [Version DOI](https://doi.org/10.5281/zenodo.24569526) · [All versions](https://doi.org/10.5281/zenodo.24569525) · [Admission record](ADMISSION.md)
+
+Admission records the checks completed under Kline’s research standard. Independent expert peer review remains outstanding.
 
 Kumar and Cooley recorded Hadamard matrices of order 2092 on October 11 and 14, 2026, respectively. Kline’s November 26, 2026 release gave two constructions of order 7516. This paper shows how **both known orders arise from short Golay pairs by the same construction**. [Kumar’s chronology](https://generalised.si/research/hadamard-matrices) · [Kline’s order-7516 release](https://doi.org/10.5281/zenodo.24549453) · [Read this paper](paper/main.pdf) · [LaTeX source](paper/main.tex)
 
