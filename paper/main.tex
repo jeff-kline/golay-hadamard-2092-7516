@@ -1,0 +1,126 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.85in]{geometry}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\pdftrailerid{}
+\hypersetup{pdftitle={Golay constructions of Hadamard matrices of orders 2092 and 7516},pdfauthor={Jeffery Kline}}
+\setlength{\emergencystretch}{2em}
+\title{Golay constructions of Hadamard matrices of orders 2092 and 7516}
+\author{Jeffery Kline}
+\date{November 26, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a real Hadamard matrix of order 2092 from the length-one Golay pair. Seven doublings give a pair of length 128. A three-entry extension gives a weighing matrix of order 524 and weight 522, to which the real weighing-matrix transfer applies at the prime 521. This places an order listed as sporadic in the November 2026 survey of Egan, Kotsireas, London and \'O Cath\'ain in an explicit family. A complex Golay pair of length 234 gives a construction of order 7516, with no conference matrix supplied as input. The binary construction also gives orders 2572 and 4204. In each example four block determinants certify that every choice of signed bases within the prescribed pairs leaves a reflection.
+\end{abstract}
+
+\section*{The construction at 2092}
+Kumar records an October 11, 2026 commit for his Goethals--Seidel construction of order 2092 and an October 14 commit for Cooley's construction~\cite{kumar,cooley}. Egan, Kotsireas, London and \'O Cath\'ain describe Cooley's Legendre quadruple of length 522 and count 2092 among the 29 orders outside the families in their Table~4~\cite[Section~4]{survey}. We give a family construction for this known order. It is a specialization of the Golay corollary of~\cite{kline}.
+
+Write $H(h)$ for a real sign matrix with row Gram $hI_h$, and $W(v,k)$ for a square $\{0,\pm1\}$ matrix of order $v$ with row Gram $kI_v$. The transfer of~\cite{kline} constructs $H(4(q+2))$ from $W(q+3,q+1)$ for every prime $q\equiv1\pmod4$.
+
+\medskip\noindent\textbf{Corollary.}
+For each integer $a\ge0$ for which $2^{a+2}+9$ is prime, there is an explicit $H(2^{a+4}+44)$. In particular, $a=7$ gives $H(2092)$.
+
+\smallskip\noindent\emph{Proof.}
+Put $N(f)=f(z)f(z^{-1})$. A binary Golay pair of length $g$ consists of two polynomials $A,B$ with sign coefficients in degrees $0,\ldots,g-1$ and $N(A)+N(B)=2g$. Start with $A=B=1$. The pair $A+z^gB,\ A-z^gB$ has length $2g$ and summed norm $2N(A)+2N(B)=4g$. Iteration supplies the pair at $g=2^a$.
+
+Take $u=1+z-z^2$ and $v=1+z^2$. The terms at lags $\pm2$ cancel in $N(u)+N(v)=5$. Append these tails with opposite signs to obtain the four words
+\[
+ A+z^gu,\quad A-z^gu,\quad B+z^gv,\quad B-z^gv .
+\]
+Their summed norm is $2(N(A)+N(B))+2(N(u)+N(v))=4g+10$. Put $L=g+3$ and reduce modulo $z^L-1$. The four length-$L$ circulants therefore have summed row Gram $(4L-2)I_L$. Substitution in the Goethals--Seidel array gives the Gysin--Seberry matrix $W(4L,4L-2)$~\cite[Theorem~7]{gs}. Now $q=4L-3=4g+9$ is $1\bmod4$. When $q$ is prime the transfer gives $H(16g+44)$. Taking $g=128$ gives $W(524,522)$ and $q=521$.\hfill$\square$
+
+\section*{Two binary companion orders}
+The same calculation with a one-entry tail $(u,v)=(1,0)$ gives $L=g+1$ and $W(4L,4L-2)$. The two tail lengths account for all three rows below. Four doublings of the fixed length-10 Golay pair give length 160. For both witnesses the generator first reverses the second word of the length-10 seed, preserving its norm. Turyn's product with the fixed length-26 pair gives length 260~\cite{seeds}. Kumar previously reached the latter two Hadamard orders using quaternary conference matrices of orders 322 and 526~\cite{kumar}.
+
+\begin{center}
+\begin{tabular}{rrrrlrr}
+\toprule
+$h$ & $g$ & Tail & Prime $q$ & Weighing input & Row pairs checked & Distance\\
+\midrule
+2092 & 128 & 3 & 521  & $W(524,522)$   & 2,187,186 & 1046\\
+2572 & 160 & 1 & 641  & $W(644,642)$   & 3,306,306 & 1286\\
+4204 & 260 & 3 & 1049 & $W(1052,1050)$ & 8,834,706 & 2102\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\newpage
+\section*{A complex Golay construction at 7516}
+Both earlier constructions~\cite{first7516} used a symmetric conference matrix of order 118 for $W(1880,1878)$. One used Yamada's circulants at 233, the other quaternion blocks from the Paley matrix at 467. Kumar supplied the conference matrix and credited J.~Y.~Z.~Ho with its earlier existence. We reach the same weighing parameters using three short Golay pairs. The zeros identify the row and column pairs. The signs in the full tiles determine the conference entries used by the transfer.
+
+\medskip\noindent\textbf{Complex Golay construction.}
+A complex Golay pair of length $g$ with coefficients in $\{1,i,-1,-i\}$ gives $W(8g+8,8g+6)$. If $8g+5$ is prime, it gives a real $H(32g+28)$.
+
+\smallskip\noindent\emph{Proof.}
+Prepend a zero to each word and write $A,B$ for the results in the group ring of the cyclic group of order $g+1$. Write $e$ for the identity and $^*$ for conjugation followed by reversal of the group index. Periodizing the Golay identity gives $AA^*+BB^*=2g e$. Form the four words
+\[
+e+(1+i)A,\qquad e-(1+i)A,\qquad (1+i)(e+B),\qquad (1+i)(e-B).
+\]
+Their summed Hermitian norm is $6e+4(AA^*+BB^*)=(8g+6)e$. Write the four corresponding circulants as $U_j+iV_j$. Taking real and imaginary parts gives
+\[
+ \sum_{j=1}^4 (U_jU_j^T+V_jV_j^T)=(8g+6)I,\qquad
+ \sum_{j=1}^4(V_jU_j^T-U_jV_j^T)=0 .
+\]
+These are the two identities in Kharaghani's eight-circulant array~\cite{array}. Its blocks use the real and imaginary parts in pairs. Away from the identity, multiplication by $1+i$ turns each fourth root into two signs. At the identity only the imaginary parts of the first two words vanish. Thus the array is $W(8g+8,8g+6)$. The transfer applies with $q=8g+5$ whenever $q$ is prime.\hfill$\square$
+
+\medskip\noindent\textbf{The length-234 input.}
+Use the complex pair $(1,1,-1),(1,i,1)$ on both sides of the binary length-26 pair of~\cite{seeds} in the Golay multiplication rule~\cite{complex}. The following polynomial description specifies the product. For a pair $a,b$ of length $m$, put
+\[
+ P(a,b)=\begin{pmatrix}a& b\\-b^\#&a^\#\end{pmatrix},
+ \qquad f^\#(z)=z^{m-1}\overline{f(1/\bar z)} .
+\]
+On the unit circle $P(a,b)P(a,b)^*=2mI$ for a Golay pair, with $^*$ here denoting conjugate transpose. Let $G$ be this matrix for the length-three pair and $P_{26}$ for the binary pair. With $F=\left(\begin{smallmatrix}1&1\\1&-1\end{smallmatrix}\right)$, put $M=FP_{26}F/4$. Its Gram is $13I$. Each of its 26 coefficient matrices has exactly one nonzero entry, equal to $\pm1$. The generator checks this directly for the specified seed. Now form
+\[
+ G(z^{78})\,M(z^3)\,G(z).
+\]
+Its Gram is $6\cdot13\cdot6\,I=468I$. Each exponent $0,\ldots,233$ has a unique expansion $78j+3k+\ell$, with $0\le j,\ell<3$ and $0\le k<26$. The single nonzero entry of the middle coefficient makes each resulting entry a fourth root of unity. The first row is therefore a complex Golay pair of length $234=3\cdot26\cdot3$.
+
+At $g=234$ the array gives $W(1880,1878)$ and the prime $1877$ gives $H(7516)$. The row-distance verifier checked all $28{,}241{,}370$ distinct pairs of rows of this matrix. Every distance was $3758$.
+
+\newpage
+\section*{A four-block certificate for reflections}
+In these weighing matrices the two zero columns of each row identify a second row with the same zeros. Grouping the rows and columns by these pairs gives zero diagonal tiles and full $2\times2$ Hadamard tiles off the diagonal~\cite{kline}. Write $F=\left(\begin{smallmatrix}1&1\\1&-1\end{smallmatrix}\right)$. Each full tile $B_{ij}$ gives a signed permutation $D_{ij}=B_{ij}F/2$. The rotations among these eight permutations represent the four quaternary phases $1,i,-1,-i$.
+
+Under a signed basis change $D_{ij}\mapsto P_i D_{ij}Q_j^{T}$, the product of the determinants at the corners of a rectangle is invariant. Each row factor $\det P_i$ and each column factor $\det Q_j$ occurs twice. A product of $-1$ thus forces at least one reflection under every such choice of bases.
+
+Number the pairs from zero in the order their zero sets first occur among the rows. Use the associated zero-column pairs in the same order, with the two indices of each pair increasing. In block positions $(0,2),(1,2),(1,j),(0,j)$ the determinants are
+\[
+\begin{array}{c|c|rrrr}
+h&j&\multicolumn{4}{c}{\det D\ \text{in rectangle order}}\\ \hline
+2092&66&+1&-1&-1&-1\\
+2572&5 &-1&-1&-1&+1\\
+4204&3 &+1&-1&+1&+1\\
+7516&3 &+1&-1&+1&+1
+\end{array}
+\]
+For example, at 2092 the block rows use original rows $(0,258)$ and $(1,259)$, and the block columns use $(262,393)$ and $(329,460)$. In rectangle order the four uncompressed tiles are
+\[
+ F,\qquad
+ \begin{pmatrix}1&-1\\1&1\end{pmatrix},\qquad
+ \begin{pmatrix}-1&-1\\1&-1\end{pmatrix},\qquad
+ \begin{pmatrix}-1&-1\\1&-1\end{pmatrix}.
+\]
+Since $\det(F/2)=-1/2$, their compressed determinants are $+1,-1,-1,-1$. The obstruction concerns these paired arrays. Equivalence of the final Hadamard matrices to earlier examples remains undetermined.
+
+The accompanying code regenerates the signs, checks the full weighing Gram, and constructs each Hadamard matrix. A separate program measures the Hamming distance of every distinct row pair. A distance of $h/2$ gives dot product zero. These checks establish the displayed matrices directly.
+
+\paragraph{Acknowledgment.} AI assisted with the exposition, source checks and verification under the author's direction.
+
+\begingroup\small
+\begin{thebibliography}{9}\setlength{\itemsep}{0pt}
+\bibitem{complex} R. Craigen, W. Holzmann and H. Kharaghani, \href{https://doi.org/10.1016/S0012-365X(01)00162-5}{Complex Golay sequences: structure and applications}, Discrete Math. \textbf{252} (2002), 73--89.
+\bibitem{array} H. Kharaghani, Arrays for orthogonal designs, J. Combin. Des. \textbf{8} (2000), 166--173. The eight-circulant formula is also displayed in \href{https://www3.stat.sinica.edu.tw/ss_newpaper/SS-2024-0379_na.pdf}{Alhelali, Georgiou and Stylianou, Lemma~2}.
+\bibitem{cooley} T. Cooley, \href{https://github.com/Middletownbooks/Hadamard}{Hadamard matrix repository}, October 2026.
+\bibitem{survey} R. Egan, I. S. Kotsireas, S. London and P. \'O Cath\'ain, \href{https://arxiv.org/abs/2610.27175v2}{Recent progress in the construction of Hadamard matrices}, arXiv:2610.27175v2, November 3, 2026.
+\bibitem{gs} M. Gysin and J. Seberry, \href{https://ajc.maths.uq.edu.au/pdf/12/ocr-ajc-v12-p157.pdf}{On the weighing matrices of order $4n$ and weight $4n-2$ and $2n-1$}, Australas. J. Combin. \textbf{12} (1995), 157--174.
+\bibitem{seeds} J. Jedwab and M. G. Parker, \href{https://doi.org/10.1002/jcd.20222}{A construction of binary Golay sequence pairs from odd-length Barker sequences}, J. Combin. Des. \textbf{17} (2009), 478--491.
+\bibitem{kline} J. Kline, \href{https://doi.org/10.5281/zenodo.24519197}{Hadamard matrices of orders 5164 and 8332 from real weighing matrices}, v0.1.0, November 2026.
+\bibitem{first7516} J. Kline, \href{https://doi.org/10.5281/zenodo.24549453}{A Hadamard matrix of order 7516 and constructions at 14556 and 16012}, v0.1.0, November 26, 2026.
+\bibitem{kumar} K. Kumar, \href{https://generalised.si/research/hadamard-matrices}{Hadamard matrices of 34 orders with no known matrix in Table 4 of Cati and Pasechnik}, GSI-R-0001, November 16, 2026.
+\end{thebibliography}
+\endgroup
+\end{document}

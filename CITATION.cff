@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite the paper and identify the version used."
+title: "Golay constructions of Hadamard matrices of orders 2092 and 7516"
+version: "0.1.0"
+type: software
+authors:
+  - family-names: Kline
+    given-names: Jeffery
+license: GPL-3.0-only
+repository-code: "https://github.com/jeff-kline/golay-hadamard-2092-7516"
+keywords:
+  - Hadamard matrices
+  - Golay pairs
+  - weighing matrices
+abstract: >-
+  Seven elementary Golay doublings give a real Hadamard matrix of order
+  2092 through a weighing-matrix transfer. A complex Golay pair of length
+  234 supplies a weighing matrix of order 1880 and weight 1878, yielding
+  a construction at order 7516 without a pre-existing conference matrix.
+  Binary companion inputs give orders 2572 and 4204. All four orders were
+  previously known. The software generates the matrices and checks every
+  pair of distinct rows.
