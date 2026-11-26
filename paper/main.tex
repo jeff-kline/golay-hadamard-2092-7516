@@ -13,13 +13,13 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-We construct a real Hadamard matrix of order 2092 from the length-one Golay pair. Seven doublings give a pair of length 128. A three-entry extension gives a weighing matrix of order 524 and weight 522, to which the real weighing-matrix transfer applies at the prime 521. This places an order listed as sporadic in the November 2026 survey of Egan, Kotsireas, London and \'O Cath\'ain in an explicit family. A complex Golay pair of length 234 gives a construction of order 7516, with no conference matrix supplied as input. The binary construction also gives orders 2572 and 4204. In each example four block determinants certify that every choice of signed bases within the prescribed pairs leaves a reflection.
+We construct real Hadamard matrices of orders 2092 and 7516 from short Golay pairs. The November 2026 survey of Egan, Kotsireas, London and \'O Cath\'ain lists 2092 among the orders outside its construction families. Here seven doublings of the length-one Golay pair supply the length-128 input to a known family construction. A complex Golay pair of length $g$ gives Hadamard order $32g+28$ whenever $8g+5$ is prime. At $g=234$, three short pairs supply the input for order 7516 without a pre-existing conference matrix. The binary construction also gives orders 2572 and 4204. In all four examples, a product of four block determinants shows that at least one block acts as a reflection under every choice of signed bases within the prescribed pairs.
 \end{abstract}
 
-\section*{The construction at 2092}
-Kumar records an October 11, 2026 commit for his Goethals--Seidel construction of order 2092 and an October 14 commit for Cooley's construction~\cite{kumar,cooley}. Egan, Kotsireas, London and \'O Cath\'ain describe Cooley's Legendre quadruple of length 522 and count 2092 among the 29 orders outside the families in their Table~4~\cite[Section~4]{survey}. We give a family construction for this known order. It is a specialization of the Golay corollary of~\cite{kline}.
+\section*{From Golay pairs to Hadamard matrices}
+Kumar dates his Goethals--Seidel construction of order 2092 to October 11, 2026, and Cooley's construction from a length-522 Legendre quadruple to October 14~\cite{kumar,cooley}. The November survey counts 2092 among the 29 orders outside the families in its Table~4~\cite[Section~4]{survey}. A Golay pair consists of two sequences whose aperiodic autocorrelations cancel at each nonzero shift. We obtain order 2092 from two one-entry sequences by applying the Golay corollary of~\cite{kline}. At 7516, where both earlier constructions used a conference matrix of order 118~\cite{first7516}, three short Golay pairs supply the input.
 
-Write $H(h)$ for a real sign matrix with row Gram $hI_h$, and $W(v,k)$ for a square $\{0,\pm1\}$ matrix of order $v$ with row Gram $kI_v$. The transfer of~\cite{kline} constructs $H(4(q+2))$ from $W(q+3,q+1)$ for every prime $q\equiv1\pmod4$.
+Both constructions use a real weighing matrix $W(v,k)$, a square matrix of order $v$ with entries $0,\pm1$ and $WW^T=kI_v$. Write $H(h)$ for a square sign matrix of order $h$ with $HH^T=hI_h$. The transfer of~\cite{kline} constructs $H(4(q+2))$ from $W(q+3,q+1)$ whenever $q\equiv1\pmod4$ is prime. The weighing matrix has two zeros in each row. Taking $q=521$ gives order 2092 from $W(524,522)$.
 
 \medskip\noindent\textbf{Corollary.}
 For each integer $a\ge0$ for which $2^{a+2}+9$ is prime, there is an explicit $H(2^{a+4}+44)$. In particular, $a=7$ gives $H(2092)$.
@@ -33,6 +33,7 @@ Take $u=1+z-z^2$ and $v=1+z^2$. The terms at lags $\pm2$ cancel in $N(u)+N(v)=5$
 \]
 Their summed norm is $2(N(A)+N(B))+2(N(u)+N(v))=4g+10$. Put $L=g+3$ and reduce modulo $z^L-1$. The four length-$L$ circulants therefore have summed row Gram $(4L-2)I_L$. Substitution in the Goethals--Seidel array gives the Gysin--Seberry matrix $W(4L,4L-2)$~\cite[Theorem~7]{gs}. Now $q=4L-3=4g+9$ is $1\bmod4$. When $q$ is prime the transfer gives $H(16g+44)$. Taking $g=128$ gives $W(524,522)$ and $q=521$.\hfill$\square$
 
+\newpage
 \section*{Two binary companion orders}
 The same calculation with a one-entry tail $(u,v)=(1,0)$ gives $L=g+1$ and $W(4L,4L-2)$. The two tail lengths account for all three rows below. Four doublings of the fixed length-10 Golay pair give length 160. For both witnesses the generator first reverses the second word of the length-10 seed, preserving its norm. Turyn's product with the fixed length-26 pair gives length 260~\cite{seeds}. Kumar previously reached the latter two Hadamard orders using quaternary conference matrices of orders 322 and 526~\cite{kumar}.
 
@@ -48,7 +49,6 @@ $h$ & $g$ & Tail & Prime $q$ & Weighing input & Row pairs checked & Distance\\
 \end{tabular}
 \end{center}
 
-\newpage
 \section*{A complex Golay construction at 7516}
 Both earlier constructions~\cite{first7516} used a symmetric conference matrix of order 118 for $W(1880,1878)$. One used Yamada's circulants at 233, the other quaternion blocks from the Paley matrix at 467. Kumar supplied the conference matrix and credited J.~Y.~Z.~Ho with its earlier existence. We reach the same weighing parameters using three short Golay pairs. The zeros identify the row and column pairs. The signs in the full tiles determine the conference entries used by the transfer.
 
